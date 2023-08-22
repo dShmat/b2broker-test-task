@@ -1,0 +1,26 @@
+<section class="main-input-container">
+  <form [formGroup]="paramsForm" class="input-form">
+    <div>
+      <label>
+        Timer, ms
+        <input type="text" formControlName="timer">
+      </label>
+    </div>
+    <div>
+      <label>
+        Array size
+        <input type="text" formControlName="arraySize">
+      </label>
+    </div>
+    <div>
+      <label>
+        Additional array ids
+        <input type="text" formControlName="arrayIds">
+      </label>
+    </div>
+    <div>
+      <button class="stop-button" (click)="strop()">Stop</button>
+    </div>
+  </form>
+</section>
+<app-table [tableData]="result"></app-table>

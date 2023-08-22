@@ -1,0 +1,45 @@
+.main-container {
+  padding: 0 20px;
+  overflow: auto;
+  border: 1px solid black;
+  max-height: 600px;
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    width: 20%;
+    text-align: center;
+  }
+
+  .main-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  .child-table {
+    border: 1px solid black;
+  }
+
+  .row {
+    border: 1px solid black;
+
+    .main-cell {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+
+      &.left-border {
+        border-left: 1px solid black;
+      }
+
+      &.right-border {
+        border-right: 1px solid black;
+      }
+
+      &.child-container {
+        padding: 10px;
+      }
+    }
+  }
+}

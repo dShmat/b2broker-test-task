@@ -1,0 +1,53 @@
+<div *ngIf="tableData" class="main-container">
+  <table class="main-table">
+    <tr>
+      <th>
+        <span>id</span>
+      </th>
+      <th>
+        <span>int</span>
+      </th>
+      <th>
+        <span>float</span>
+      </th>
+      <th>
+        <span>color</span>
+      </th>
+      <th>
+        <span>child</span>
+      </th>
+    </tr>
+    <tr *ngFor="let row of tableData" class="row">
+      <td class="main-cell left-border">
+        <span>{{row.id}}</span>
+      </td>
+      <td class="main-cell">
+        <span>{{row.int}}</span>
+      </td>
+      <td class="main-cell">
+        <span>{{row.float}}</span>
+      </td>
+      <td class="main-cell">
+        <span [style.background-color]="row.color">{{row.color}}</span>
+      </td>
+      <td class="main-cell child-container right-border">
+        <table class="child-table">
+          <tr>
+            <th>
+              <span>id</span>
+            </th>
+            <th>
+              <span>color</span>
+            </th>
+          </tr>
+          <td>
+            <span>{{row.child.id}}</span>
+          </td>
+          <td>
+            <span [style.background-color]="row.child.color">{{row.child.color}}</span>
+          </td>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

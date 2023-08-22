@@ -1,0 +1,17 @@
+.main-input-container {
+  border: 1px solid black;
+  padding: 20px;
+
+  input, label {
+    display:block;
+  }
+
+  .input-form {
+    display: flex;
+    justify-content: space-between;
+
+    .stop-button {
+      height: 100%;
+    }
+  }
+}
